@@ -124,7 +124,7 @@ class SearchClientSpec extends ClientSpec {
     def "Test out the flags being set in IndexOptions with the default which needs to be passed in"() {
         List list = new ArrayList()
         when:
-        new Client.IndexOptions(0x0).serializeRedisArgs(list)
+        new BaseClient.IndexOptions(0x0).serializeRedisArgs(list)
 
         then:
         noExceptionThrown()
